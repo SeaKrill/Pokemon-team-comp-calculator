@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://crh3khhwy0rvo"]
+
+[ext_resource type="Script" uid="uid://b226y3anclxk1" path="res://scenes/poke_type.gd" id="1_k6ob0"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_k6ob0")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+selected = 0
+item_count = 1
+popup/item_0/text = "NONE"
+popup/item_0/id = 0
+
+[node name="OptionButton2" type="OptionButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+selected = 0
+item_count = 1
+popup/item_0/text = "NONE"
+popup/item_0/id = 0

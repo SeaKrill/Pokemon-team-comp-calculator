@@ -1,0 +1,243 @@
+[gd_scene load_steps=6 format=3 uid="uid://32v5b7l8erg3"]
+
+[ext_resource type="Script" uid="uid://cxecy6r2jtmdk" path="res://scenes/main.gd" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://d2y7vu3nwwr0c" path="res://scenes/party_selector.gd" id="2_sugp2"]
+[ext_resource type="Script" uid="uid://brdqc66vynmum" path="res://scenes/banner.gd" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://dieifm5aky5n2" path="res://scenes/databox.gd" id="3_tbgi4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyhfs"]
+bg_color = Color(0.523783, 0.0140104, 2.88785e-07, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0wfyh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Selector" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_sugp2")
+
+[node name="Thumbnail" type="PanelContainer" parent="MarginContainer/VBoxContainer/Selector"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="MarginContainer/VBoxContainer/Selector/Thumbnail"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Databox" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_tbgi4")
+
+[node name="Banner" type="PanelContainer" parent="MarginContainer/VBoxContainer/Databox"]
+layout_mode = 2
+script = ExtResource("3_sugp2")
+
+[node name="HBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Databox/Banner"]
+layout_mode = 2
+
+[node name="Check" type="CheckBox" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="Id" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jyhfs")
+text = "ID"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Id"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "v"
+vertical_alignment = 1
+
+[node name="Entry" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "NAME"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Entry"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Type" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TYPE"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Type"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Ability" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ability"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Ability"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Rating" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "RATING"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Rating"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="HP" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "HP"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/HP"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Attack" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "ATK"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Attack"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Defense" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "DEF"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Defense"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Sp_Attack" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "SpA"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Sp_Attack"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Sp_Defense" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "SpD"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Sp_Defense"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Speed" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "SPD"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Speed"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="Total" type="Button" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "TOTAL"
+
+[node name="Sort" type="Label" parent="MarginContainer/VBoxContainer/Databox/Banner/HBox/Total"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="ScrollBox" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Databox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="List" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Databox/ScrollBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

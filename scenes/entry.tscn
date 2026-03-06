@@ -1,0 +1,122 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6d75pqwejlj2"]
+
+[ext_resource type="Texture2D" uid="uid://dt82asyotgijp" path="res://sprites/001.png" id="1_0tit2"]
+[ext_resource type="Script" uid="uid://brs6hk3aruy6w" path="res://scenes/entry.gd" id="1_5go5w"]
+
+[node name="Entry" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 32)
+offset_right = 180.0
+offset_bottom = 31.0
+script = ExtResource("1_5go5w")
+
+[node name="Expansion" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Banner" type="HBoxContainer" parent="Expansion"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite" type="TextureRect" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("1_0tit2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ID" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Entry" type="Label" parent="Expansion/Banner"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="HBoxContainer" parent="Expansion/Banner"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="0" type="TextureRect" parent="Expansion/Banner/Type"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+expand_mode = 3
+stretch_mode = 5
+
+[node name="1" type="TextureRect" parent="Expansion/Banner/Type"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Ability" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rating" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HP" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Attack" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Defense" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sp_Attack" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sp_Defense" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Speed" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Total" type="Label" parent="Expansion/Banner"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
